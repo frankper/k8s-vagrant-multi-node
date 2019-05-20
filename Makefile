@@ -5,17 +5,17 @@ REVERSE_LINES=sed -e '1!G;h;$$!d'
 
 # === BEGIN USER OPTIONS ===
 # Vagrantfile set to use.
-BOX_OS ?= fedora
+BOX_OS ?= ubuntu
 # Box setup
 #BOX_IMAGE
 # Disk setup
 DISK_COUNT ?= 1
-DISK_SIZE_GB ?= 10
+DISK_SIZE_GB ?= 20
 # VM Resources
 MASTER_CPUS ?= 2
 MASTER_MEMORY_SIZE_GB ?= 2
-NODE_CPUS ?= 1
-NODE_MEMORY_SIZE_GB ?= 1
+NODE_CPUS ?= 2
+NODE_MEMORY_SIZE_GB ?= 2
 
 NODE_COUNT ?= 2
 # Network
@@ -26,7 +26,7 @@ POD_NW_CIDR ?= 10.244.0.0/16
 KUBECTL_AUTO_CONF ?= true
 
 # Kubernetes and kubeadm
-KUBERNETES_VERSION ?=
+KUBERNETES_VERSION ?=1.14.1
 #KUBERNETES_PKG_VERSION_SUFFIX ?=
 # `kubeadm init` flags for master
 # NOTE: The `--kubernetes-version` is automatically set if `KUBERNETES_VERSION` is given.
